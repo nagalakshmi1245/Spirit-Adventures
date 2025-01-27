@@ -26,8 +26,8 @@ html{
     scroll-behavior: smooth;
 }
 *{
-    padding: 0%;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 /* LOADING */
@@ -82,9 +82,9 @@ html{
 
 #div1{
     position: relative;
-    top: -229px;
+    top: -15.9vw;
     width: 100%;
-    height: 772.7999px;
+    height:53.72vw;
 }
 .openingimg{
     width: 100%;
@@ -93,15 +93,15 @@ html{
 
 @keyframes cloudsimg {
     from{
-        transform: translateY(-300px);
+        transform: translateY(-20.83vw);
     }
     to{
-        transform: translateX(0px);
+        transform: translateX(0vw);
     }
 }
 #cloud{
     position: relative;
-    top: -773px;
+    top: -53.68vw;
 
     animation-name: cloudsimg;
     animation-duration: 2s;
@@ -112,16 +112,16 @@ html{
 
 @keyframes boysimg {
     from{
-        transform:translateX(-1000px) translateY(300px);
+        transform:translateX(-69.44vw) translateY(20.83vw);
     }
     to{
-        transform: translateX(0px);
+        transform: translateX(0vw);
     }
 }
 
 #boys{
     position: relative;
-    top: -1546px;
+    top: -107.36vw;
 
     animation-name: boysimg;
     animation-duration: 2s;
@@ -132,13 +132,13 @@ html{
 
 #mainheading{
     position: relative;
-    top: 470px;
-    left: -1100px;
-    line-height: 90px;
+    top: 32.64vw;
+    left: -76.39vw;
+    line-height: 6.25vw;
     text-align: center;
     font-family: predicat;
     color: white;
-    font-size: 125px;
+    font-size: 8.68vw;
 }
 
 .font{
@@ -153,10 +153,10 @@ html{
 
 @keyframes font {
     from{
-        transform: translateX(0px);
+        transform: translateX(0vw);
     }
     to{
-        transform: translateX(1100px);
+        transform: translateX(76.39vw);
     }
 }
 
@@ -164,13 +164,13 @@ html{
 
 #main_container{
     width: 100%;
-    height: 50px;
+    height: 3.47vw;
     background-color: transparent;
-    margin-top: 15px ;
+    margin-top: 1.04vw ;
 }
 
 #home_item{
-    margin-left: 815px;
+    margin-left: 56.53vw;
 }
 .anavbar{
     color: white;
@@ -178,17 +178,17 @@ html{
 .anavbar:hover{
     text-decoration: none;
     color: lightgreen;
-    font-size: 30px;
+    font-size: 2.08vw;
 }
 
 #main_list{
     position: relative;
-    top: -850px;
+    top: -59.03vw;
     display: flex;
-    font-size: 28px;
+    font-size: 1.94vw;
     font-family: bohemy;
     list-style-type: none;
-    margin-left:840px;
+    margin-left:58.33vw;
 
     animation-name: navanime;
     animation-duration: 2s;
@@ -201,26 +201,26 @@ html{
 
 @keyframes navanime {
     from{
-        transform: translateX(0px);
+        transform: translateX(0vw);
     }
     to{
-        transform: translateY(90px);
+        transform: translateY(6.25vw);
     }
 }
 
 .items{
-    margin-left: 70px;
-    margin-top: -2px;
+    margin-left: 4.86vw;
+    margin-top: -0.14vw;
     color: white;
 }
 #logo_item{
-    margin-left: -770px;
+    margin-left: -53.47vw;
 }
 
 /* CATEGORIES */
 
 #cate_section{
-    margin-top: 800px;
+    margin-top: 55.56vw;
 }
 
 #categories_sec{
@@ -229,29 +229,29 @@ html{
 #categories_head{
     text-align: center;
     font-family:neuemachinaregular ;
-    font-size: 65px;
-    margin-bottom: 20px;
+    font-size: 4.51vw;
+    margin-bottom: 1.39vw;
     color: #D8CAA7 ;
 }
 
 #nextline_card{
-    margin-left: 340px;
+    margin-left: 23.61vw;
 }
 
 .card{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 27.78vw;
+    height: 27.78vw;
     background: white;
-    border-radius: 15px;
+    border-radius: 1.04vw;
     overflow: hidden;
     /* box-shadow: 0 5px 15px red(0,0,0,0.2); */
-    box-shadow: 0 4px 8px 4px white;
+    box-shadow: 0vw 0.28vw 0.56vw 0.28vw white;
     transition: 0.5s;
     cursor: pointer;
-    margin-top: 60px;
-    margin-left: 85px;
-    margin-bottom: 40px;
+    margin-top: 4.17vw;
+    margin-left: 5.90vw;
+    margin-bottom: 2.78vw;
 
     animation: cardanime 1s ease forwards;
     opacity: 0;
@@ -287,7 +287,7 @@ html{
 @keyframes cardanime {
     from{
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.39vw);
     }
     to{
         opacity: 1;
@@ -305,7 +305,7 @@ html{
     font-family: neuemachinaregular;
 }
 .modal-body{
-    font-size: 40px;
+    font-size: 2.78vw;
     font-family: Rudeee;
 }
 /* a{
@@ -314,11 +314,11 @@ html{
 } */
 .citifonts{
     color: white;
-    font-size: 25px;
+    font-size: 1.74vw;
 }
 
 .citifonts:hover{
-    font-size: 40px;
+    font-size: 2.78vw;
 }
 
 /* ABOUT US */
@@ -326,9 +326,9 @@ html{
 #about_head{
     text-align: center;
     font-family:neuemachinaregular ;
-    font-size: 65px;
-    margin-top: 80px;
-    margin-bottom: 20px;
+    font-size: 4.51vw;
+    margin-top: 5.56vw;
+    margin-bottom: 1.39vw;
     color: #D8CAA7 ;
 }
 
@@ -338,27 +338,27 @@ html{
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 20px 0;
-    margin-top: 100px;
+    padding: 1.39vw 0;
+    margin-top: 6.94vw;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 83.33vw;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1.04vw;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 200px;
-    margin: 10px;
+    min-width: 13.89vw;
+    margin: 0.69vw;
 }
 
 .footer-section h3 {
-    margin-bottom: 15px;
+    margin-bottom: 1.04vw;
     font-size: 1.1em;
     color: #ff6f00;
 }
@@ -372,7 +372,7 @@ html{
 }
 
 .footer-section ul li {
-    margin-bottom: 10px;
+    margin-bottom: 0.69vw;
 }
 
 .footer-section ul li a {
@@ -386,8 +386,8 @@ html{
 }
 
 .footer-logo {
-    width: 100px;
-    margin-bottom: 15px;
+    width: 6.94vw;
+    margin-bottom: 1.04vw;
 }
 
 .contact-section p a {
@@ -401,30 +401,30 @@ html{
 
 .footer-bottom {
     text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #373333;
-    padding-top: 10px;
-    font-size: 14px;
+    margin-top: 1.39vw;
+    border-top: 0.0694vw solid #373333;
+    padding-top: 0.69vw;
+    font-size: 0.97vw;
 }
 
 /* Responsive Design */
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .footer-container {
         flex-wrap: nowrap;
-        /* Prevent line breaks */
+        
         justify-content: space-between;
     }
 
     .footer-section {
         flex: 1 1 30%;
-        /* Ensure sections are evenly spaced side-by-side */
+        
         margin: 10px;
     }
-}
+} */
 
 /* 768px (Small tablets and large phones) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -433,7 +433,7 @@ html{
 
     .footer-section {
         flex: 1 1 100%;
-        /* Full-width sections */
+        
         max-width: 400px;
     }
 
@@ -444,10 +444,10 @@ html{
     .footer-bottom {
         font-size: 12px;
     }
-}
+} */
 
 /* 425px (Large mobile phones) */
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
     .footer-container {
         padding: 0 10px;
     }
@@ -463,10 +463,10 @@ html{
     .footer-bottom {
         font-size: 11px;
     }
-}
+} */
 
 /* 375px (Medium mobile phones) */
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     .footer-section h3 {
         font-size: 0.9em;
     }
@@ -479,10 +479,10 @@ html{
         font-size: 10px;
         padding-top: 5px;
     }
-}
+} */
 
 /* 320px (Small mobile phones) */
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
     .footer-container {
         padding: 0 5px;
     }
@@ -499,4 +499,4 @@ html{
         font-size: 9px;
         padding-top: 5px;
     }
-}
+} */
