@@ -1,0 +1,63 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+def home(request):
+    return render(request, 'home.html')
+def getintouch(request):
+    return render(request, 'getintouch.html')
+
+
+
+def goa(request):
+    return render(request,'goa.html')
+def pondicherry(request):
+    return render(request,'pondicherry.html')
+def vizag(request):
+    return render(request,'vizag.html')
+
+
+
+def manali(request):
+    return render(request,'manali.html')
+def himalayas(request):
+    return render(request,'himalayas.html')
+def coorg(request):
+    return render(request,'coorg.html')
+def meghalaya(request):
+    return render(request,'meghalaya.html')
+
+
+
+def ooty(request):
+    return render(request,'ooty.html')
+def munnar(request):
+    return render(request,'munnar.html')
+def shimla(request):
+    return render(request,'shimla.html')
+def darjeeling(request):
+    return render(request,'darjeeling.html')
+
+
+
+def tirupati(request):
+    return render(request,'tirupati.html')
+def ayodhya(request):
+    return render(request,'ayodhya.html')
+def varanasi(request):
+    return render(request,'varanasi.html')
+def shirdi(request):
+    return render(request,'shirdi.html')
+def kedarnath(request):
+    return render(request,'kedarnath.html')
+
+
+
+def delhi(request):
+    return render(request,'delhi.html')
+def mysore(request):
+    return render(request,'mysore.html')
+def agra(request):
+    return render(request,'agra.html')
+def hyderabad(request):
+    return render(request,'hyderabad.html')

@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+
+    <!-- LOADING -->
+
+    <!-- <div>
+        <p>4</p>
+        <span class="loader-4"> </span>
+    </div> -->
+
+    <!-- OPENINGG -->
+
+    <nav id="main_container">
+        <div id="div1">
+            <h1 id="mainheading" class="font">Spirit <br> <span class="font">Adventures</span></h1>
+            <img class="openingimg" src="../static/img/openingfinal.jpg" alt="">
+            <img id="cloud" class="openingimg" src="../static/img/clo.png" alt="">
+            <img id="boys" class="openingimg"  src="../static/img/bys.png" alt="">
+        </div>
+        <ol id="main_list">
+            <li href="#" class="items" id="logo_item"><a class="anavbar" href="#">SA</a></li>
+            <li class="items" id="home_item"><a class="anavbar" href="">Home</a></li>
+            <li class="items" id="categories_item"><a class="anavbar" href="#cate_section">Categories</a></li>
+            <li class="items" id="aboutus_item"><a class="anavbar" href="#aboutus_sec">About Us</a></li>
+            <li class="items" id="getintouch_item"><a class="anavbar" href="{% url 'app1:getintouch' %}">Get In Touch</a></li>
+            <!-- <a href="#"><li class="items poppins-regular" id="logo_item">SA</li></a>
+            <a href=""><li class="items" id="home_item">Home</li></a>
+            <a href="#cate_section"><li class="items" id="categories_item">Categories</li></a>
+            <a href="#container"><li class="items" id="aboutus_item">About Us</li></a>
+            <a href="{% url 'app1:getintouch' %}"><li class="items" id="getintouch_item">Get In Touch</li></a> -->
+        </ol>
+    </nav> 
+
+
+    <!-- CATEGORIESSS -->
+
+    <section id="cate_section">
+        <h1 id="categories_head">Categories</h1>
+        <div id="categories_sec">
+            <div class="card" style="--delay:0ms">
+                <img src="../static/img/beaches.jpg" alt="" data-toggle="modal" data-target="#beachcities" ><span class="title">Beaches</span>
+            </div>
+            <div class="card" style="--delay:300ms">
+                <img src="../static/img/M2.jpg" alt="" data-toggle="modal" data-target="#mountaincities"><span class="title">Mountains</span>
+            </div>
+            <div class="card" style="--delay:600ms">
+                <img src="../static/img/hill stations.jpg" alt="" data-toggle="modal" data-target="#hillstationcities"><span class="title">Hill Stations</span>
+            </div>
+        </div>
+        <div id="categories_sec">
+            <div class="card" id="nextline_card" style="--delay:900ms">
+                <img src="../static/img/temples.jpg" alt="" data-toggle="modal" data-target="#pilgrimagescities"><span class="title">Pilgrimages</span>
+            </div>
+            <div class="card" style="--delay:1200ms">
+                <img src="../static/img/Stone Chariot Hampi.jpg" alt="" data-toggle="modal" data-target="#historiccities"><span class="title">Historic Places</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- POP OVERSSS -->
+
+    <div class="modal fade" id="beachcities">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class=" w-100 text-center">Cities</h3>
+                </div>
+                <div class="modal-body">
+                    <a class="btn citifonts" href="{% url 'app1:goa' %}">Goa</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:pondicherry' %}">Pondicherry</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:vizag' %}">Vizag</a>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mountaincities">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class=" w-100 text-center">Cities</h3>
+                </div>
+                <div class="modal-body">
+                    <a class="btn citifonts" href="{% url 'app1:manali' %}">Manali</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:himalayas' %}">Himalayas</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:coorg' %}">Coorg</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:meghalaya' %}">Meghalaya</a>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hillstationcities">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class=" w-100 text-center">Cities</h3>
+                </div>
+                <div class="modal-body">
+                    <a class="btn citifonts" href="{% url 'app1:ooty' %}">Ooty</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:munnar' %}">Munnar</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:shimla' %}">Shimla</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:darjeeling' %}">Darjeeling</a>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="pilgrimagescities">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class=" w-100 text-center">Cities</h3>
+                </div>
+                <div class="modal-body">
+                    <a class="btn citifonts" href="{% url 'app1:tirupati' %}">Tirupati</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:ayodhya' %}">Ayodhya</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:varanasi' %}">Varanasi</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:shirdi' %}">Shirdi</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:kedarnath' %}">Kedarnath</a>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="historiccities">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class=" w-100 text-center">Cities</h3>
+                </div>
+                <div class="modal-body">
+                    <a class="btn citifonts" href="{% url 'app1:delhi' %}">Delhi</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:mysore' %}">Mysore</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:agra' %}">Agra</a><br>
+                    <a class="btn citifonts" href="{% url 'app1:hyderabad' %}">Hyderabad</a><br>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUTUS -->
+
+    <section id="aboutus_sec">
+        <h1 id="about_head">About Us</h1>
+    </section>
+    
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo and Company Info -->
+            <div class="footer-section logo-section">
+                <h3>Spirit Adventures LLP<br></h3>
+                <img src="../static/img/Screenshot 2025-01-23 195635.png" alt="Spirit Adventures Logo" class="footer-logo">
+                <p>&copy; Spirit Adventures LLP<br>All Rights Reserved.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section contact-section">
+                <h3>Contact Info</h3>
+                <p><strong>Hyderabad Base</strong></p>
+                <p>3rd Floor, Delta House Building,<br>above iSports, Miyapur,<br> Telangana 500081</p>
+                <br>
+                <p>
+                    📞 Weekend Events: <a href="tel:+917075559641">+91 707 555 9641</a><br>
+                    📞 Backpacking Trips: <a href="tel:+917075559671">+91 707 555 9671</a><br>
+                    📧 <a href="mailto:trek@thehtc.in">trek@thehtc.in</a>
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cancellations and Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Spirit Adventures LLP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    
+    
+
+
+</body>
+</html>
