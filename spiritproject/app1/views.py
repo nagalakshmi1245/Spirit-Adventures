@@ -1,9 +1,11 @@
 from django.shortcuts import render
-
+from .forms import *
+from .models import *
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    categories = category.objects.prefetch_related('subcategories').all()
+    return render(request, 'home.html', {'categories': categories})
 def getintouch(request):
     return render(request, 'getintouch.html')
 
