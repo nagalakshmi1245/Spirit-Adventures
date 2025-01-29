@@ -9,7 +9,13 @@ def home(request):
     return render(request, 'home.html', {'categories': categories})
 
 def getintouch(request):
-    return render(request, 'getintouch.html')
+    if request.method=='POST':
+       l=userInfoForm(request.POST)
+       if l.is_valid():
+           l.save()
+    st=userInfoForm()       
+    return render(request, 'getintouch.html',{'data':st})
+
 
 
 def goa(request):
