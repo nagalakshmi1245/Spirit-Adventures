@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            height: fit-content;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-section {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-section {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .traveller {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .traveller select,
+        .traveller input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-details input,
+        .contact-details select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e64a19;
+        }
+
+        .price-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .total-price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .secure {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .secure img {
+            display: block;
+            margin: 10px auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 40px;
+        }
+
+        #submit {
+            width: 130px;
+            height: 40px;
+            background-color: #ff5722;
+            color: #ddd;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+
+        }
+
+        #button {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="{% static 'img/openingfinal.jpg' % }" alt="">
+    </div>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <!-- Left Section -->
+            <div class="form-section">
+                <h2>Traveller Details</h2>
+                <div id="traveller-details">
+                    <div class="traveller">
+                        <select>
+                            <option>Mr</option>
+                            <option>Ms</option>
+                            <option>Mrs</option>
+                        </select>
+                        <input type="text" placeholder="First Name *" name="first_name">
+                        <input type="text" placeholder="Last Name *" name="last_namr">
+                    </div>
+                </div>
+                <button class="btn" onclick="addTraveller()">Add Traveller</button>
+
+                <h2>Contact Details</h2>
+                <div class="contact-details">
+                    <input type="text" placeholder="First Name *" name="first_name">
+                    <input type="text" placeholder="Last Name *" name="last_name">
+                    <input type="email" placeholder="Email *" name="email">
+                    <input type="tel" placeholder="Phone *" name="phone">
+                    <select>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                    <input type="text" placeholder="Address" name="Address">
+                </div>
+
+                <h2>Billing Details</h2>
+                <div class="contact-details">
+                    <input type="text" placeholder="First Name *" name="first_name">
+                    <input type="text" placeholder="Last Name *" name="last_name">
+                    <input type="email" placeholder="Email *" name="email">
+                    <input type="tel" placeholder="Phone *" name="phone">
+                    <select>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                    <input type="text" placeholder="Address" name="address">
+                </div>
+                <h2>Notes</h2>
+
+
+                <textarea name="" id=""></textarea>
+                <br><br>
+                <div id="button">
+                    <input id=submit type="submit" value="NEXT STEP">
+                </div>
+            </div>
+
+
+            <!-- Right Section -->
+            <!-- <div class="summary-section">
+            <h2>Summary</h2>
+            <div>
+                <label for="coupon">Coupon Code</label>
+                <input type="text" id="coupon" placeholder="Enter Code">
+                <button class="btn">Apply</button>
+            </div>
+
+            <div class="price-section">
+                <p>Total Price</p>
+                <p class="total-price">₹6,297.90</p>
+                <button class="btn">Next Step</button>
+            </div>
+
+            <div class="secure">
+                <p>Pay Safely With Us</p>
+                <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+            </div>
+        </div>
+    </div> -->
+
+
+
+            <script>
+                function addTraveller() {
+                    const travellerDetails = document.getElementById('traveller-details');
+
+                    const newTraveller = document.createElement('div');
+                    newTraveller.classList.add('traveller');
+                    newTraveller.innerHTML = `
+                <select>
+                    <option>Mr</option>
+                    <option>Ms</option>
+                    <option>Mrs</option>
+                </select>
+                <input type="text" placeholder="First Name *">
+                <input type="text" placeholder="Last Name *">
+            `;
+
+                    travellerDetails.appendChild(newTraveller);
+                }
+            </script>
+    </form>
+</body>
+
+</html>

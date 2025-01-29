@@ -1,0 +1,120 @@
+{% extends 'base.html' %} {% block body %}
+
+<h1 id="city">HYDERABAD</h1>
+<p id="tagline">Take only Memories Leave only Footprints</p>
+<br />
+<div id="container_goa">
+  <div id="left_div">
+    <img src="../static/img/openingfinal.jpg" alt="" id="img_1" />
+    <p id="info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi est
+      placeat iure aliquid ea, quia esse tempora dolorem cumque earum alias
+      numquam iusto velit, recusandae excepturi incidunt labore culpa ut quo
+      sapiente! Sapiente corporis sequi aliquam officiis porro fugiat nihil
+      magni, quod molestias consectetur blanditiis assumenda, obcaecati,
+      repellat totam ducimus veritatis maiores cupiditate. Velit saepe dolores
+      quasi nihil illo expedita quia ipsum cupiditate. Sapiente officia
+      voluptates, repellat itaque provident maiores voluptatum accusamus
+      veritatis laborum. Possimus voluptate iusto hic pariatur illum dicta iure
+      beatae sed culpa officia exercitationem quos, dignissimos illo earum
+      itaque rerum recusandae dolores cum aut minima error veritatis voluptatem
+      omnis. Error veritatis obcaecati non vitae veniam eaque accusantium atque.
+      Incidunt consectetur beatae atque eligendi cumque pariatur corrupti non
+      eaque quas eius qui asperiores officiis culpa dolor similique, officia,
+      enim aliquid sapiente facere fuga quo cupiditate et accusantium soluta.
+      Nulla numquam necessitatibus, esse inventore eos architecto. Quibusdam
+      beatae optio nobis eaque qui iusto ab maxime, mollitia commodi eius quod?
+      Earum id ipsum alias voluptas sequi, quaerat vero laborum quos dicta
+      repellat harum aspernatur, voluptatibus officiis odit minus. Fugit earum,
+      veritatis error quaerat vel odit odio sequi tempora rerum labore quod
+      facilis cupiditate perferendis corrupti, tempore quibusdam maxime eius
+      explicabo.
+    </p>
+    <h1 id="gallery">Beauty Of Goa</h1>
+    <br />
+    <div class="container carousel" id="img_div">
+      <div class="wrap">
+        <img src="../static/img/openingfinal.jpg" alt="" class="images" />
+        <img src="../static/img/openingfinal.jpg" alt="" class="images" />
+        <img src="../static/img/openingfinal.jpg" alt="" class="images" />
+        <img src="../static/img/openingfinal.jpg" alt="" class="images" />
+        <img src="../static/img/openingfinal.jpg" alt="" class="images" />
+      </div>
+    </div>
+    <h1 id="package">Friendly Packages</h1>
+    <div class="container">
+
+      <!-- {% for i in data %}
+          <div id="course-container">
+            <div id="top_cont">
+              <img src="{{i.image.url}}" alt="" />
+              <div id="title_div">
+                <h1 id="title">{{i.title}}</h1>
+                <button id="lang_button">{{i.language}}</button>
+              </div>
+
+              <p id="text">{{i.text}}</p>
+              <span id="discountedprice">₹{{i.discounted_price}}</span>
+              <del id="originalprice">₹ {{i.original_price}}</del>
+              <button id="discountedpercentage">
+                {{i.discounted_percentage}}% OFF
+              </button>
+            </div>
+            <div id="bottom_cont">
+              <button id="details_button">View Details</button>
+            </div>
+          </div>
+          {% endfor %} -->
+    </div>
+  </div>
+  <div id="right_div">
+    <div>
+      <img src="../static/img/openingfinal.jpg" alt="" id="img_2" />
+      <h4 id="text">WHERE WE ARE NOW</h4>
+      <img src="../static/img/openingfinal.jpg" alt="" id="map" />
+    </div>
+  </div>
+</div>
+
+<!-- FB -->
+
+<div class="container mt-5">
+  <h2 class="text-center" id="fd_txt">We Value Your Feedback</h2>
+  <form id="feedbackForm" class="mt-4">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="feedback">Feedback</label>
+      <textarea
+        class="form-control"
+        id="feedback"
+        rows="4"
+        placeholder="Your feedback"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">
+      Submit Feedback
+    </button>
+  </form>
+  <div id="responseMessage" class="mt-3 text-center"></div>
+</div>
+{% endblock body %}

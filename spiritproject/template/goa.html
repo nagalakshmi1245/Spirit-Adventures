@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<h1 id="city">GOA</h1>
+<p id="tagline">Take only Memories Leave only Footprints</p>
+<br />
+<div id="container_goa">
+  <div id="left_div">
+    <img src="{% static 'img/goa1.jpeg' %}" alt="" id="img_1" />
+    <p id="info">
+      Goa, located on the western coast of India, is renowned for its stunning beaches, vibrant culture, and Portuguese
+      heritage. This small state offers a unique blend of Indian and European influences, evident in its architecture,
+      food, and traditions. Its beaches, such as Baga, Calangute, Anjuna, and Palolem, are famous for water sports,
+      nightlife, and serene sunsets. Goa's history shines through its UNESCO World Heritage Sites like the Basilica of
+      Bom Jesus and Se Cathedral in Old Goa. The cuisine, a mix of Indian spices and Portuguese flavors, features
+      popular dishes like Goan Fish Curry, Vindaloo, and Bebinca. Tourists also flock to attractions such as Dudhsagar
+      Falls, Fort Aguada, and spice plantations. Goa is known for its vibrant festivals, including the Goa Carnival and
+      the Feast of St. Francis Xavier. Its lively nightlife, especially in areas like Baga and Vagator, adds to its
+      charm. The best time to visit Goa is from November to February, when the weather is pleasant and perfect for
+      exploring its beauty.
+    </p>
+    <h1 id="gallery">Beauty Of Goa</h1>
+    <br />
+    <div class="container carousel" id="img_div">
+      <div class="wrap">
+        <img src="{% static 'img/goa2.webp' %}" alt="" class="images" />
+        <img src="{% static 'img/goa3.jpeg' %}" alt="" class="images" />
+        <img src="{% static 'img/goa4.jpeg' %}" alt="" class="images" />
+        <img src="{% static 'img/goa5.jpeg' %}" alt="" class="images" />
+        <img src="{% static 'img/goa6.avif' %}" alt="" class="images" />
+      </div>
+    </div>
+    <h1 id="package">Friendly Packages</h1>
+    <div class="container">
+
+      <!-- {% for i in data %}
+          <div id="course-container">
+            <div id="top_cont">
+              <img src="{{i.image.url}}" alt="" />
+              <div id="title_div">
+                <h1 id="title">{{i.title}}</h1>
+                <button id="lang_button">{{i.language}}</button>
+              </div>
+
+              <p id="text">{{i.text}}</p>
+              <span id="discountedprice">₹{{i.discounted_price}}</span>
+              <del id="originalprice">₹ {{i.original_price}}</del>
+              <button id="discountedpercentage">
+                {{i.discounted_percentage}}% OFF
+              </button>
+            </div>
+            <div id="bottom_cont">
+              <button id="details_button">View Details</button>
+            </div>
+          </div>
+          {% endfor %} -->
+    </div>
+  </div>
+  <div id="right_div">
+    <div>
+      <img src="{% static 'img/girl.png' %}" alt="" id="img_2" />
+      <h4 id="text">WHERE WE ARE NOW</h4>
+      <img src="{% static 'img/goa_webp.png' %}" alt="" id="map" />
+    </div>
+  </div>
+</div>
+
+<!-- FB -->
+<div class="container mt-5">
+  <h2 class="text-center" id="fd_txt">We Value Your Feedback</h2>
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Enter your name"
+      required name="name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      placeholder="Enter your email"
+      required name="email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="feedback">Feedback</label>
+    <textarea
+      class="form-control"
+      id="feedback"
+      rows="4"
+      placeholder="Your feedback"
+      required name="feedback"
+    ></textarea>
+  </div> 
+  <input type="submit" class="btn btn-primary btn-block" value="submit">
+</form>
+<div id="responseMessage" class="mt-3 text-center"></div>
+</div>
+
+
+{% endblock body %}

@@ -1,0 +1,444 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Jersey+10&family=Macondo&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Jersey+10&family=Macondo&family=Mouse+Memoirs&family=Oswald:wght@200..700&display=swap');
+@font-face {
+    font-family: "neuemachinaregular";
+    src: url(../fonts/NeueMachinaRegular.otf)
+}
+@font-face {
+    font-family: "Rudeee";
+    src: url(../fonts/Rude.ttf);
+}
+@font-face {
+    font-family: art;
+    src: url(../fonts/Archionity.ttf);
+}
+@font-face {
+    font-family: bohemy;
+    src: url(../fonts/Bohemy.otf);
+}
+@font-face {
+    font-family: predicat;
+    src: url(../fonts/Predikat\ Oneday.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #D8CAA7 ;
+}
+body{
+    background-color: #1D2955;
+}
+/* #D8CAA7 */
+
+
+/* NAVBAR2 */
+
+#main_container2{
+    width: 100%;
+    height: 3.65vw;
+    background-color: black;
+    /* backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+    border: 2px solid rgba(255,255,255,0.18); */
+    text-decoration: none;
+}
+#main_list2{
+    display: flex;
+    font-size: 1.46vw;
+    font-family: bohemy;
+    list-style-type: none;
+    margin-left:43.75vw;
+}
+.items2{
+    margin-left: 3.65vw;
+    margin-top: 1.04vw;
+}
+#logo_item2{
+    margin-left: -40.1vw;
+}
+#home_item2{
+    margin-left: 42.45vw;
+}
+
+
+
+
+/* CONTACTUS BODY */
+
+.contactus-main-heading{
+    text-align: center;
+    font-family: neuemachinaregular;
+    color: #D8CAA7;
+    margin-top: 0.78vw;
+    font-size: 3.39vw;
+}
+.contactus-main-para{
+    font-size: none;
+    text-align: center;
+    font-size: 1.56vw;
+}
+.cantactus-card{
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contactus-logos:hover{
+    transform: translateY(-1.04vw);
+    transition: all 1s;
+}
+.card1{
+    height: 10.42vw;
+    width: 18.75vw;
+}
+.card-heading{
+    text-transform: uppercase;
+    color: rgb(255, 123, 0);
+    font-size: 1.04vw;
+    margin-top: 10%;
+}
+
+.card-para{
+    font-size: 1.04vw;
+    margin-top: 10%;  
+    color: white; 
+}
+
+.card-number{
+    font-size: 1.04vw;
+    margin-top: 10%;
+}
+
+.card-mail{
+    color: rgb(255, 123, 0);
+    font-size: 1.04vw;
+    margin-top: 10%;
+}
+
+.card-map{
+    color: rgb(255, 123, 0);
+    font-size: 1.04vw;
+    margin-top: 10%;
+}
+
+.getdetails:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.forms{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.form-heading{
+    text-transform: uppercase;
+    color: rgb(255, 123, 0);
+    text-align: center;
+}
+
+.form-para{
+    text-align: center;
+    margin-top: 1%;
+    color: white;
+}
+
+hr{
+    margin-top: 1%;
+    width: 4.17vw;
+    border-top: 0.16vw solid silver;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-1{
+    margin-top: 2%;
+    display: flex;
+    gap: 2.08vw;
+    margin-left: 22.91vw;
+}
+
+
+
+.name{
+    padding: 0.52vw;
+    height: 1.56vw;
+    width: 15.63vw;
+    border: solid silver;
+    text-align: left;
+}
+
+.email{
+    border:  solid silver;
+    height: 1.56vw;
+    padding: 0.52vw;
+    width: 15.63vw;
+    text-align:left;
+}
+
+.subject{
+    margin-top: 1.04vw;
+    gap: 2%;
+    height: 2.08vw;
+    border:  solid silver;
+    padding: 0.52vw;
+    width: 33.33vw;
+    text-align:left;
+}
+
+.message{
+    margin-top: 1.04vw;
+    height: 3.13vw;
+    border:  solid silver;
+    padding: 0.52vw;
+    width: 33.33vw;
+    text-align:left;
+}
+
+.submit{
+    margin-bottom: 2.60vw;
+    margin-top: 1.04vw;
+    color: white;
+    height: 2.60vw;
+    font-weight: bold;
+    border:  solid silver;
+    padding: 0.52vw;
+    width: 33.33vw;
+    background-color:  rgb(255, 123, 0);
+}
+
+
+/* GOA PAGE */
+
+
+#container_goa {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 250vh;
+  }
+  #city {
+    font-family: neuemachinaregular;
+    font-weight: 200;
+    text-align: center;
+    font-size: 3.13vw;
+    margin-bottom: 0.52vw;
+    margin-top: 2.08vw;
+    color: #D8CAA7;
+  }
+  #tagline {
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+  }
+  #left_div,
+  #right_div {
+    height: 100%;
+    float: left;
+  }
+  #left_div {
+    width: 70%;
+    /* background-color: red; */
+  }
+
+  #right_div {
+    width: 30%;
+    /* background-color: rgb(179, 0, 255); */
+  }
+  #img_1 {
+    margin-left: 8.0vw;
+    margin-top: 1.04vw;
+    width: 80%;
+    height: 60vh;
+    border-radius: 0vw;
+  }
+  .images {
+    float: left;
+    width: 20vw;
+    height: 30vh;
+    margin-left: 2vw;
+  }
+  #map {
+    width: 85%;
+    height: 15.63vw;
+    margin-left: 4.5%;
+    background-color: white;
+  }
+  #text {
+    /* text-align: center; */
+    margin-left: 8vw;
+    font-family:neuemachinaregular;
+  }
+  #img_2 {
+    width: 60%;
+    height: 35vh;
+    margin-left: 5vw;
+    margin-top: 1.04vw;
+    margin-bottom: 1.30vw;
+  }
+  #info {
+    margin-top: 0.8vw;
+    color: white;
+    padding-left: 9%;
+    padding-right: 7%;
+    text-align: justify;
+  }
+  #gallery,
+  #package {
+    color: #D8CAA7;
+    padding-left: 8%;
+    margin-top: 2.60vw;
+    font-family: neuemachinaregular;
+  }
+
+  .carousel{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 85%;
+  }
+  .wrap{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 13.02vw;
+    justify-items: stretch;
+    animation: slide 10s linear infinite;
+  }
+
+  .wrap img{
+    width: 10.42vw;
+    height: 10.42vw;
+    border-radius: 0.52vw;
+    object-fit: cover;
+  }
+  @keyframes slide {
+    to{
+      translate: calc(-1 * 13.02vw);
+    }
+  }
+
+  #img_div{
+    margin-bottom: 2.08vw;
+  }
+
+  #course-container {
+    width: 13.02vw;
+    height: 26.56vw;
+    margin-left: 2.86vw;
+    margin-top: 5%;
+    float: left;
+    border-radius: 0.52vw;
+  }
+  #top_cont {
+    width: 100%;
+    height: 88%;
+    background-color: #171717;
+    border-radius: 0.52vw;
+  }
+  #bottom_cont {
+    width: 100%;
+    height: 12%;
+  }
+  #title_div {
+    height: 8.33vw;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: 10.16vw;
+    border-top-left-radius: 0.52vw;
+    border-top-right-radius: 0.52vw;
+  }
+
+  #title {
+    color: white;
+    font-family: neuemachinaregular;
+    padding: 1.04vw;
+  }
+
+  #lang_button {
+    background-color: #7c7c7c;
+    font-size: 0.89vw;
+    color: white;
+    width: 9vw;
+    height: 4.5vh;
+    border: none;
+    border-radius: 0.21vw;
+    margin-left: 1.04vw;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  #text {
+    color: #D8CAA7;
+    padding-left: 1vw;
+    padding-top: 0.52vw;
+    font-family: neuemachinaregular;
+    font-size: 1.04vw;
+  }
+
+  #discountedprice,
+  #originalprice {
+    float: left;
+    margin-left: 1.04vw;
+    font-family: "Times New Roman", Times, serif;
+  }
+  #discountedprice {
+    padding-top: 0.26vw;
+    color: white;
+    font-size: 1.30vw;
+  }
+  del {
+    font-size: 1.04vw;
+    margin-top: 0.42vw;
+    color: #7c7c7c;
+  }
+  #discountedpercentage {
+    font-size: 0.78vw;
+    margin-left: 3.13vw;
+    margin-top: 0.42vw;
+    padding: 0.21vw;
+  }
+  #details_button {
+    background-color: #24cfa6;
+    width: 18.23vw;
+    height: 2.34vw;
+    border: none;
+    border-radius: 0.26vw;
+    font-size: 1.56vw;
+    margin-top: 2.5vh;
+  }
+
+  body {
+    background-color: #f8f9fa;
+  }
+
+  #fd_txt{
+    color: rgb(255, 123, 0);
+  }
+
+  .btn-primary {
+    background-color:  rgb(255, 123, 0);
+    border-color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: orange;
+    border-color: white;
+  }
+  .form-group{
+    color: white;
+  }
+
+  #responseMessage {
+    font-size: 1.2em;
+    color: #28a745; /* Green color for success message */
+  }
