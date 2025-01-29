@@ -224,8 +224,26 @@ html{
 }
 
 #categories_sec{
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: auto; 
+    gap: 3.90vw; 
+    padding-bottom: 1vw;
 }
+
+.card:nth-child(4) {
+    grid-column: 2/3 ;
+    justify-self: start;
+    margin-left: -10vw; 
+}
+.card:nth-child(5) {
+    grid-column: 3/4 ; 
+    justify-self: start; 
+    margin-left: -10vw;
+}
+
+
 #categories_head{
     text-align: center;
     font-family:neuemachinaregular ;
@@ -234,9 +252,9 @@ html{
     color: #D8CAA7 ;
 }
 
-#nextline_card{
+/* #nextline_card{
     margin-left: 23.61vw;
-}
+} */
 
 .card{
     position: relative;
@@ -250,7 +268,7 @@ html{
     transition: 0.5s;
     cursor: pointer;
     margin-top: 4.17vw;
-    margin-left: 5.90vw;
+    margin-left: 1vw;
     margin-bottom: 2.78vw;
 
     animation: cardanime 1s ease forwards;
