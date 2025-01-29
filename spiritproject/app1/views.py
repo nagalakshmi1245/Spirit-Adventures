@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from .forms import *
 from .models import *
 
@@ -18,8 +18,10 @@ def goa(request):
         f1 = feedbackForm(request.POST)  
         if f1.is_valid():  
             f1.save()  
-            # return render(request, 'goa.html', {'form': feedbackForm()})  
-    return render(request, 'goa.html', {'form': f1})
+            return redirect('app1:goa') 
+    F=feedback.objects.all() 
+    return render(request, 'goa.html', {'form': f1,'form1':F})
+
 
 
 def pondicherry(request):
