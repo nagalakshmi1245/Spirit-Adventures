@@ -28,8 +28,6 @@ def goa(request):
     F=feedback.objects.all() 
     return render(request, 'goa.html', {'form': f1,'form1':F})
 
-
-
 def pondicherry(request):
     return render(request,'pondicherry.html')
 def vizag(request):

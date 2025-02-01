@@ -73,7 +73,7 @@
             </div>
             <div class="modal-body">
                 {% for subcategory in category.subcategories.all %}
-                    <p>{{ subcategory.name }}</p>
+                    <p><a class="btn citifonts" href="{% url 'app1:goa' %}">{{ subcategory.name }}</a></p>
                 {% empty %}
                     <p>No {{ category.name }} available</p>
                 {% endfor %}
