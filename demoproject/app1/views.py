@@ -44,7 +44,8 @@ def cityconnection(request,city_name):
 
 def package_details(request, package_id):
     package = get_object_or_404(packages, id=package_id)
-    return render(request, 'package_details.html', {'package': package})
+    p_categories = package_details_category.objects.prefetch_related('packagedetails').all()  
+    return render(request, 'demo.html', {'package': package,'p_categories':p_categories})
 
 
 def Contact(request):

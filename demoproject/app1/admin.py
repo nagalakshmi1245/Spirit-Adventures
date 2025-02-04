@@ -26,3 +26,12 @@ class citypageAdmin(admin.ModelAdmin):
     
 admin.site.register(Basecitypage,citypageAdmin)
 
+class packagedetailsAdmin(admin.ModelAdmin):
+    list_display=['day']
+
+admin.site.register(package_details_category,packagedetailsAdmin)
+
+class packagedetailssubAdmin(admin.ModelAdmin):
+    list_display=['t1','t2','t3','t4','text','pid']
+
+admin.site.register(package_details_sub,packagedetailssubAdmin)

@@ -63,4 +63,24 @@ class packages(models.Model):
         return f"{self.package_name} - {self.city.city_name}"
     
 
-# class Package_details()
+class package_details_category(models.Model):
+    day=models.CharField(max_length=100)
+    def __str__(self):
+        return self.day
+    
+class package_details_sub(models.Model):
+    t1=models.CharField(max_length=100)
+    t2=models.CharField(max_length=100)
+    t3=models.CharField(max_length=100)
+    t4=models.CharField(max_length=100)
+    text=models.TextField()
+    pid = models.ForeignKey(
+        package_details_category, 
+        on_delete=models.CASCADE, 
+        blank=False,
+        related_name='packagedetails'
+    )
+    # def __str__(self):
+    #     return self.t1,self.t2,self.t3,self.t4,self.text
+    
+
