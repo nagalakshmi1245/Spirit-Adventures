@@ -1,0 +1,146 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Jersey+10&family=Macondo&family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Jersey+10&family=Macondo&family=Mouse+Memoirs&family=Oswald:wght@200..700&display=swap");
+@font-face {
+  font-family: "neuemachinaregular";
+  src: url(../fonts/NeueMachinaRegular.otf);
+}
+@font-face {
+  font-family: "Rudeee";
+  src: url(../fonts/Rude.ttf);
+}
+@font-face {
+  font-family: art;
+  src: url(../fonts/Archionity.ttf);
+}
+@font-face {
+  font-family: bohemy;
+  src: url(../fonts/Bohemy.otf);
+}
+@font-face {
+  font-family: predicat;
+  src: url(../fonts/Predikat\ Oneday.ttf);
+}
+body {
+  background-color: #1d2955;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+a {
+  text-decoration: none;
+  color: #d8caa7;
+}
+/* #D8CAA7 */
+
+/* NAVBAR2 */
+
+#main_container2 {
+  width: 100%;
+  height: 3.47vw;
+  background-color: black;
+  text-decoration: none;
+}
+#main_list2 {
+  padding-top: 22px;
+  display: flex;
+  font-size: 1.8229166666666667vw;
+  font-family: bohemy;
+  list-style-type: none;
+  margin-left: 58.33vw;
+}
+.anavbar {
+  color: white;
+}
+.anavbar:hover {
+  text-decoration: none;
+  color: lightgreen;
+  font-size: 1.853125vw;
+}
+.items2 {
+  margin-left: 4.86vw;
+  /* margin-top: -0.14vw; */
+}
+#logo_item2 {
+  margin-left: -53.47vw;
+}
+#home_item2 {
+  margin-left: 52.53vw;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1.39vw 0;
+  margin-top: 6.94vw;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 83.33vw;
+  margin: 0 auto;
+  padding: 0 1.04vw;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 13.89vw;
+  margin: 0.69vw;
+}
+
+.footer-section h3 {
+  margin-bottom: 1.04vw;
+  font-size: 1.2vw;
+  color: #ff6f00;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 1.2vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.69vw;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6f00;
+}
+
+.footer-logo {
+  width: 6.94vw;
+  margin-bottom: 1.04vw;
+}
+
+.contact-section p a {
+  color: #ff6f00;
+  text-decoration: none;
+}
+
+.contact-section p a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.39vw;
+  border-top: 0.0694vw solid #373333;
+  padding-top: 0.69vw;
+  font-size: 0.97vw;
+}

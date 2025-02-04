@@ -1,0 +1,245 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <link rel="stylesheet" href="../static/css/mediaquery.css" />
+    <!-- <script src="../static/js/feedback.js"defer></script> -->
+  </head>
+
+  <body>
+    <!-- LOADING -->
+
+    <!-- <div>
+        <p>4</p>
+        <span class="loader-4"> </span>
+    </div> -->
+
+    <!-- OPENINGG -->
+
+    <nav id="main_container">
+      <div id="div1">
+        <h1 id="mainheading" class="font">
+          Spirit <br />
+          <span class="font">Adventures</span>
+        </h1>
+        <img class="openingimg" src="../static/img/openingfinal.jpg" alt="" />
+        <img id="cloud" class="openingimg" src="../static/img/clo.png" alt="" />
+        <img id="boys" class="openingimg" src="../static/img/bys.png" alt="" />
+      </div>
+      <ol id="main_list">
+        <li href="#" class="items" id="logo_item">
+          <a class="anavbar" href="#">SA</a>
+        </li>
+        <li class="items" id="home_item">
+          <a class="anavbar" href="">Home</a>
+        </li>
+        <li class="items" id="categories_item">
+          <a class="anavbar" href="#cate_section">Categories</a>
+        </li>
+        <li class="items" id="aboutus_item">
+          <a class="anavbar" href="#aboutus_sec">About Us</a>
+        </li>
+        <li class="items" id="getintouch_item">
+          <a class="anavbar" href="{% url 'app1:getintouch' %}">Get In Touch</a>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- CATEGORIESSS -->
+
+    <section id="cate_section">
+      <h1 id="categories_head">Categories</h1>
+      <div id="categories_sec">
+        {% for category in categories %}
+        <div class="card" style="--delay: {{ forloop.counter0|add:300}}ms">
+          <img
+            src="../static/img/{{ category.name|lower }}.jpg"
+            alt=""
+            data-toggle="modal"
+            data-target="#modal-{{ category.id }}"
+          />
+          <span class="title">{{ category.name }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- POP OVERSSS -->
+
+    {% for category in categories %}
+    <div class="modal fade" id="modal-{{ category.id }}">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="w-100 text-center">{{ category.name }}</h3>
+          </div>
+          <div class="modal-body">
+            {% for subcategory in category.subcategories.all %}
+            <p><a href="{% url 'app1:cityconnection' city_name=subcategory.name %}">{{ subcategory.name }}</a></p>
+            {% empty %}
+            <p>No {{ category.name }} available</p>
+            {% endfor %}
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- ABOUTUS -->
+
+    <section id="aboutus_sec">
+      <h1 id="about_head">About Us</h1>
+      <div id="container">
+        <div class="col-12">
+          <div class="bg-color">
+            <h1 class="aboutus-heading">Spirit Adventures</h1>
+            <p id="what">
+              Spirit Adventures is your ultimate travel companion for exploring
+              cities like a true adventurer! We specialize in
+              <span class="highlights">Trip Planning</span> and provide
+              <span class="highlights">day-to-day itineraries tailored</span> to
+              help you uncover the best spots in each city. From iconic
+              landmarks to hidden gems, Spirit Adventures ensures you experience
+              a perfect balance of culture, adventure, and discovery—without the
+              hassle of planning everything yourself. Whether you're a solo
+              backpacker or traveling in a group, we've got you covered with
+              curated, budget-friendly packages designed to make every trip
+              unforgettable.
+            </p>
+          </div>
+          <div>
+            <h1 class="aboutus-content-heading">
+              Why With Spirit Adventures ?
+            </h1>
+            <div class="container whymatter">
+              <div class="col-4 para">
+                <h4>Tailored for Backpackers</h4>
+                Whether you're a solo traveler or with a group, our packages are
+                crafted to fit the adventurous spirit of backpackers.
+              </div>
+              <div class="col-4 para">
+                <h4>Authentic City Exploration</h4>
+                Go beyond tourist traps. Discover hidden gems, local culture,
+                and off-the-beaten-path experiences in every city.
+              </div>
+              <div class="col-4 para">
+                <h4>Affordable Adventures</h4>
+                Traveling on a budget? Our packages ensure you get the most out
+                of your trip without breaking the bank.
+              </div>
+            </div><br>
+            <div class="container whymatter2">
+              <div class="col-4 para">
+                <h4>Hassle-Free Planning</h4>
+                Leave the logistics to us! From accommodation to itineraries, we
+                take care of it all so you can focus on the adventure.
+              </div>
+              <div class="col-4 para">
+                <h4>Community of Explorers</h4>
+                Connect with like-minded travelers, make memories, and share
+                experiences that last a lifetime.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="aboutus-footer">
+      <div class="aboutus-card">
+        <div>
+          <h1 class="aboutus-card-heading">5569+</h1>
+          <p class="aboutus-card-para">Events in 12 Years</p>
+        </div>
+        <div>
+          <h1 class="aboutus-card-heading">75+</h1>
+          <p class="aboutus-card-para">Event Captains</p>
+        </div>
+        <div>
+          <h1 class="aboutus-card-heading">100+</h1>
+          <p class="aboutus-card-para">Destinations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo and Company Info -->
+        <div class="footer-section logo-section">
+          <h3>Spirit Adventures LLP<br /></h3>
+          <img
+            src="../static/img/Screenshot 2025-01-23 195635.png"
+            alt="Spirit Adventures Logo"
+            class="footer-logo"
+          />
+          <p>&copy; Spirit Adventures LLP<br />All Rights Reserved.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section contact-section">
+          <h3>Contact Info</h3>
+          <p><strong>Hyderabad Base</strong></p>
+          <p>
+            3rd Floor, Delta House Building,<br />above iSports, Miyapur,<br />
+            Telangana 500081
+          </p>
+          <br />
+          <p>
+            📞 Weekend Events: <a href="tel:+917075559641">+91 707 555 9641</a
+            ><br />
+            📞 Backpacking Trips:
+            <a href="tel:+917075559671">+91 707 555 9671</a><br />
+            📧 <a href="mailto:trek@thehtc.in">trek@thehtc.in</a>
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Cancellations and Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Spirit Adventures LLP. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
