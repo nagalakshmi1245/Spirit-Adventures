@@ -2,6 +2,7 @@ from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from .forms import *
 from .models import *
 
+
 # Create your views here.
 
 def home(request):

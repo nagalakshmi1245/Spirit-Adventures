@@ -34,3 +34,7 @@ class contact(models.Model):
     email=models.EmailField(max_length=150)
     phone=models.IntegerField()
     address=models.CharField(max_length=150)
+
+class signinModel(models.Model):
+    username=models.CharField(max_length=50,null=True)
+    password=models.CharField(max_length=45,null=True)
