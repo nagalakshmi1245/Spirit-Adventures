@@ -33,15 +33,12 @@
     <link rel="stylesheet" href="../static/css/home.css" />
     <link rel="stylesheet" href="../static/css/mediaquery.css" />
     <!-- <script src="../static/js/feedback.js"defer></script> -->
+    
   </head>
+
 
   <body>
     <!-- LOADING -->
-
-    <!-- <div>
-        <p>4</p>
-        <span class="loader-4"> </span>
-    </div> -->
 
     <!-- OPENINGG -->
 
@@ -56,9 +53,19 @@
         <img id="boys" class="openingimg" src="../static/img/bys.png" alt="" />
       </div>
       <ol id="main_list">
-        <li href="#" class="items" id="logo_item">
-          <a class="anavbar" href="#">SA</a>
-        </li>
+        <!-- <li href="#" id="logo_item">
+          <a class="anavbar" href="">
+            <img src="{% static 'img/Logo.png' %}" alt="Spirit Adventures Logo" class="footer-logo" style="width: 50px;height: 50px;">
+                <span style="font-size: 18px; font-weight: bold; color: #fff;">Spirit Adventures </span>
+          </a>
+        </li> -->
+        <li class="items" id="logo_item">
+          <a class="anavbar" href="{% url 'app1:home' %}" style="display: flex; align-items: center; gap: 10px; height: 40px;">
+              <img src="{% static 'img/Logo.png' %}" alt="Spirit Adventures Logo" class="footer-logo" style="width: 50px; height: 60px;">
+              <span style="font-size: 18px; font-weight: bold; color: #fff;">Spirit Adventures</span>
+          </a>
+      </li>
+      
         <li class="items" id="home_item">
           <a class="anavbar" href="">Home</a>
         </li>
@@ -76,18 +83,27 @@
 
     <!-- CATEGORIESSS -->
 
-    <section id="cate_section">
-      <h1 id="categories_head">Categories</h1>
-      <div id="categories_sec">
+    <section id="cate_section" class="container py-5">
+      <h1 id="categories_head" class="text-center mb-4">Categories</h1> <br>
+      <div id="categories_sec" class="row justify-content-center">
         {% for category in categories %}
-        <div class="card" style="--delay: {{ forloop.counter0|add:300}}ms">
-          <img
-            src="../static/img/{{ category.name|lower }}.jpg"
-            alt=""
-            data-toggle="modal"
-            data-target="#modal-{{ category.id }}"
-          />
-          <span class="title">{{ category.name }}</span>
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
+          <div class="card text-center category-card" style="animation-delay: {{ forloop.counter0|add:300 }} ms">
+            <div class="image-wrapper">
+              <img
+                src="../static/img/{{ category.name|lower }}.jpg"
+                class="card-img-top img-fluid category-img"
+                alt="{{ category.name }}"
+                data-toggle="modal"
+                data-target="#modal-{{ category.id }}"
+                style="cursor: pointer;"
+              />
+
+              <div class="overlay">
+                <span class="category-title">{{ category.name }}</span>
+              </div>
+            </div>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -104,7 +120,7 @@
           </div>
           <div class="modal-body">
             {% for subcategory in category.subcategories.all %}
-            <p><a href="{% url 'app1:cityconnection' city_name=subcategory.name %}">{{ subcategory.name }}</a></p>
+            <p><a href="{% url 'app1:cityconnection' city_name=subcategory.name %}" style="color: #d8caa7;text-decoration: none;">{{ subcategory.name }}</a></p>
             {% empty %}
             <p>No {{ category.name }} available</p>
             {% endfor %}
@@ -201,7 +217,7 @@
         <div class="footer-section logo-section">
           <h3>Spirit Adventures LLP<br /></h3>
           <img
-            src="../static/img/Screenshot 2025-01-23 195635.png"
+            src="{% static 'img/Logo.png' %}"
             alt="Spirit Adventures Logo"
             class="footer-logo"
           />

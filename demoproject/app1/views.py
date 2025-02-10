@@ -39,8 +39,15 @@ def getintouch(request):
 
 def cityconnection(request,city_name):
     city = get_object_or_404(Basecitypage, city_name__iexact=city_name)
-    package =packages.objects.filter(city=city) 
-    return render(request,'base_cities.html',{'city1':city,'packages':package})
+    package =packages.objects.filter(city=city)
+    f1 = feedbackForm()
+    if request.method == 'POST':
+        f1 = feedbackForm(request.POST)  
+        if f1.is_valid():  
+            f1.save()  
+            return redirect('app1:cityconnection', city_name=city_name) 
+    F=feedback.objects.all()  
+    return render(request,'base_cities.html',{'city1':city,'packages':package,'form1':F})
 
 
 def package_details(request, package_id):
