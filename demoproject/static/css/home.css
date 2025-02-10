@@ -20,7 +20,7 @@
 }
 
 body {
-  background-color:white;
+  background-color:black;
 }
 html {
   scroll-behavior: smooth;
@@ -29,54 +29,6 @@ html {
   padding: 0;
   margin: 0;
 }
-
-/* LOADING */
-
-/* .loader-4 {
-  position: absolute;
-  scale: 0.325;
-  width: 89.6px;
-  height: 89.6px;
-  border-radius: 50%;
-  border: 5.5px solid rgb(255 255 255 / 28%);
-  box-sizing: content-box;
-}
-
-.loader-4:before {
-  content: "";
-  position: absolute;
-  width: 4.5px;
-  height: 38.1px;
-  top: 9px;
-  left: 42.6px;
-  background: #c5c5c8;
-  border-radius: 2.2px;
-  transform-origin: 2.25px 37px;
-  animation: progress-t59zy9 2s linear infinite;
-}
-
-.loader-4:after {
-  content: "";
-  position: absolute;
-  width: 4.5px;
-  height: 24.6px;
-  top: 22.4px;
-  left: 42.6px;
-  background: #c5c5c8;
-  border-radius: 2.2px;
-  transform-origin: 2.25px 23.5px;
-  animation: progress-t59zy9 12s linear infinite;
-}
-
-@keyframes progress-t59zy9 {
-  0% {
-    tranform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-} */
 
 /* OPENING */
 
@@ -214,88 +166,71 @@ html {
   color: white;
 }
 #logo_item {
-  margin-left: -53.47vw;
+  margin-left: -54.47vw;
 }
 
 /* CATEGORIES */
 
 #cate_section {
-  margin-top: 55.56vw;
+  margin-top: 45vw;
+  padding-top: 20px;
 }
-
-#categories_sec {
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  gap: 3.9vw;
-  padding-bottom: 1vw;
+.category-card {
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  height: 300px; /* Ensuring uniform height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.card:nth-child(4) {
-  grid-column: 2/3;
-  justify-self: start;
-  margin-left: -10vw;
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.card:nth-child(5) {
-  grid-column: 3/4;
-  justify-self: start;
-  margin-left: -10vw;
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
-
+.category-img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category-card:hover .category-img {
+  filter: grayscale(0%);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.7); */
+  color: white;
+  text-align: center;
+  padding-bottom: 140px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.category-card:hover .overlay {
+  opacity: 1;
+}
+.category-title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: bold;
+}
 #categories_head {
   text-align: center;
   font-family: neuemachinaregular;
   font-size: 4.51vw;
   margin-bottom: 1.39vw;
   color: #d8caa7;
-}
-
-.card {
-  position: relative;
-  width: 27.78vw;
-  height: 27.78vw;
-  background: white;
-  border-radius: 1.04vw;
-  overflow: hidden;
-  /* box-shadow: 0 5px 15px red(0,0,0,0.2); */
-  box-shadow: 0vw 0.28vw 0.56vw 0.28vw white;
-  transition: 0.5s;
-  cursor: pointer;
-  margin-top: 4.17vw;
-  margin-left: 1vw;
-  margin-bottom: 2.78vw;
-
-  animation: cardanime 1s ease forwards;
-  opacity: 0;
-  animation-delay: var(--delay);
-}
-.title {
-  font-size: 2.5rem;
-  opacity: 0;
-  font-weight: bold;
-  font-family: Rudeee;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.8s;
-}
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s;
-  filter: grayscale(100%);
-}
-.card:hover img {
-  filter: grayscale(0);
-  scale: 1.09;
-}
-.card:hover .title {
-  font-size: 3vw;
-  opacity: 1;
 }
 
 @keyframes cardanime {
@@ -321,7 +256,6 @@ html {
   font-size: 2.78vw;
   font-family: Rudeee;
 }
-
 .citifonts {
   color: white;
   font-size: 1.74vw;
@@ -345,22 +279,26 @@ html {
   font-size: 2.78vw;
   margin-top: 4%;
   font-family: Rudeee;
-  text-align: left;
+  text-align: center;
   color: #d8caa7;
 }
 
 .aboutus-content-heading {
   margin-top: 1%;
-  /* margin-bottom: 1.3020833333333333vw; */
   font-size: 2.78vw;
-  text-align: left;
+  text-align: center;
   font-family: Rudeee;
   color: #d8caa7;
 }
 #what {
+  padding-left: 6vw;
+  padding-right: 6vw;
+  padding-bottom: 2vw;
   font-size: 1.1vw;
   text-align: justify;
   color: white;
+  padding-top: 2vw;
+
 }
 
 .highlights {
@@ -396,9 +334,7 @@ h4 {
   height: 21.484375vw;
   width: 100%;
   margin-bottom: -7.161458333333333vw;
-  margin-top: 2%;
   background-size: cover;
-  background-image: url(../img/Beach\ Campfire\ Gathering.jpeg.jpg);
   background-repeat: no-repeat;
 }
 

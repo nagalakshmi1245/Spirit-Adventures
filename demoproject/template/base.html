@@ -25,7 +25,10 @@
 
     <nav id="main_container2">
         <ol id="main_list2">
-            <li href="#" class="items2" id="logo_item2"><a class="anavbar" href="{% url 'app1:home' %}">SA</a></li>
+            <li href="#" class="items2" id="logo_item2"><a class="anavbar" href="{% url 'app1:home' %}">
+                <img src="{% static 'img/Logo.png' %}" alt="Spirit Adventures Logo" class="footer-logo" style="width: 40px;height: 40px;">
+                <span style="font-size: 18px; font-weight: bold; color: #fff;">Spirit Adventures</span>
+            </a></li>
             <li class="items2" id="home_item2"><a class="anavbar" href="{% url 'app1:home' %}">Home</a></li>
             <li class="items2" id="categories_item2"><a class="anavbar" href="{% url 'app1:home' %}#cate_section">Categories</a></li>
             <li class="items2" id="aboutus_item2"><a class="anavbar" href="{% url 'app1:home' %}#aboutus_sec">About Us</a></li>
@@ -46,7 +49,7 @@
             <!-- Logo and Company Info -->
             <div class="footer-section logo-section">
                 <h3>Spirit Adventures LLP<br></h3>
-                <img src="../static/img/Screenshot 2025-01-23 195635.png" alt="Spirit Adventures Logo" class="footer-logo">
+                <img src="{% static 'img/Logo.png' %}" alt="Spirit Adventures Logo" class="footer-logo">
                 <p>&copy; Spirit Adventures LLP<br>All Rights Reserved.</p>
             </div>
 
