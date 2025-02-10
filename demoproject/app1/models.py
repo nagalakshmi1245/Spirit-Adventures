@@ -83,4 +83,7 @@ class package_details_sub(models.Model):
     # def __str__(self):
     #     return self.t1,self.t2,self.t3,self.t4,self.text
     
+class signinModel(models.Model):
+    username=models.CharField(max_length=50,null=True)
+    password=models.CharField(max_length=45,null=True)
 
