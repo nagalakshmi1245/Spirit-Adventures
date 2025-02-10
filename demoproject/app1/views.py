@@ -22,23 +22,6 @@ def getintouch(request):
 
 
 
-# def basecity(request):
-#     f1 = feedbackForm()
-#     if request.method == 'POST':
-#         f1 = feedbackForm(request.POST)  
-#         if f1.is_valid():  
-#             f1.save()  
-#             return redirect('app1:goa') 
-#     F=feedback.objects.all() 
-#     return render(request, 'goa.html', {'form': f1,'form1':F})
-
-# def basecitypage(request):
-#     city = get_object_or_404(Basecitypage)
-#     context = {
-#         'city': city, 
-#     }
-#     return render(request, 'base_cities.html', context)
-
 def cityconnection(request,city_name):
     city = get_object_or_404(Basecitypage, city_name__iexact=city_name)
     package =packages.objects.filter(city=city)
@@ -54,15 +37,16 @@ def cityconnection(request,city_name):
 
 def package_details(request, package_id):
     package = get_object_or_404(packages, id=package_id)
-    p_categories = package_details_category.objects.prefetch_related('packagedetails').all()  
-    return render(request, 'demo.html', {'package': package,'p_categories':p_categories})
+    p_categories = package_details_category.objects.filter(package_id=package) \
+        .prefetch_related('packagedetails')
+
+    return render(request, 'package_details.html', {'package': package, 'p_categories': p_categories})
 
 @login_required
 def Contact(request):
     c1=contactform()
     if request.method=="POST":
         c=contactform(request.POST)
-        # b=billingform(request.POST)
         if c.is_valid():
             c.save()
     return render(request,'getintouch.html',{'form':c1})

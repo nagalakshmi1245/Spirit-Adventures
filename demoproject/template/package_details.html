@@ -263,24 +263,6 @@
 </div>
 <hr>
 
-<!-- <div class="container">
-    <h2>🏔️ Kashmir Trip Guide: What You Need to Know Before You Go</h2>
-    <h5>❄️ Temperatures: Be Ready for the Chill!</h5>
-    <p>Srinagar is famous for its <span class="Quick-Facts-list">Dal Lake, Shikara rides,</span> and <span class="Quick-Facts-list">Mughal gardens.</span> Explore the beautiful <span  class="Quick-Facts-list">floating markets</span> and visit <span  class="Quick-Facts-list"> Hazratbal Shrine </span> and <span  class="Quick-Facts-list"> Shankaracharya Temple.</span></p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel adipisci molestias sequi nobis hic incidunt ipsa non quaerat itaque qui quisquam, odit aliquid a laboriosam doloremque debitis sed doloribus iusto.</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quia omnis nihil unde voluptatibus deleniti nesciunt quo illo dolore obcaecati, ipsum expedita repudiandae, sint dolorem soluta consequatur sequi qui minus.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde odit totam in adipisci soluta necessitatibus recusandae provident distinctio, quidem eveniet perspiciatis fugiat. Eligendi natus quo, inventore expedita nobis nisi. Alias!</p>
-  </div>
-  <hr> -->
-
-<!-- <div class="container">
-    <h4>🚦 Traffic Conditions: Patience is Key!</h4>
-    <p>Srinagar is famous for its <span class="Quick-Facts-list">Dal Lake, Shikara rides,</span> and <span class="Quick-Facts-list">Mughal gardens.</span> Explore the beautiful <span  class="Quick-Facts-list">floating markets</span> and visit <span  class="Quick-Facts-list"> Hazratbal Shrine </span> and <span  class="Quick-Facts-list"> Shankaracharya Temple.</span></p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, et pariatur error molestiae numquam tenetur perferendis itaque deleniti? Voluptatum commodi aliquid cupiditate ab deserunt quaerat enim excepturi et animi exercitationem.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sunt ea dolorum ab illum rem, eligendi, doloremque minima eius id maxime, voluptates numquam illo inventore. Voluptatibus molestias praesentium, aliquam illo suscipit veniam iure dolores adipisci quo saepe doloremque itaque quae porro consequatur? Explicabo velit omnis necessitatibus magnam esse tempora hic.</p>
-  </div> -->
-
-<!-- <hr> -->
 
 <div class="container">
     <h4>🏠 Stays: A Cozy Experience with Some Hiccups</h4>
@@ -324,254 +306,30 @@
         </svg>
         <h4>ITINERARY</h4>
     </div>
-    <div>
+    
+     <div>
+        <h2>Package Details for {{ package.package_name }}</h2>
         <ul class="faq-list">
+            {% for day in p_categories %}
             <li>
-                <button class="toggle-btn">DAY 1 SRINAGAR</button>
-                <div class="content"><span>
-                        <p class="day-btn"><strong>10:00AM :</strong> Reporting time.10:30AM : Start to homestay and
-                            fresh up.
-                    </span> <br><br>
-                    <span><strong>11:30AM :</strong></span><span>Start to explore the places in Srinagar(Tulip garden ,
-                        Shankaracharya temple(optional), Shopping)
-                        Tulip garden – It is the largest tulip garden in Asia spread over an area of about 30
-                        hectares.</span> <br><br>
-                    <span><strong>07:00PM :</strong></span> <span>Start to House Boat Stay.</span> <br><br>
-                    <span><strong>09:00PM :</strong></span> <span>Have dinner and take rest.</span> <br><br>
-
-                    <span>*LOCAL VEHICLE WILL BE BASED ON GROUP SIZE*</span> <br><br>
-
-                    <span><strong>STAY TYPE – BASIC HOUSE BOAT STAY –</strong></span> <br> <br>
-                    Don’t expect <strong>Cinematic house boat stay…</strong>that’s not what is in reality! Our House
-                    Boat is very Basic one where you can have good bed to sleep and nice washroom.. Power Blankets will
-                    be provided….Carry Winter gear
-                    More than 2000 HTC participants stayed here! Good to go for Basic budget backpacking event like
-                    this!
-                    <strong>FOOD –</strong> <br><br>
-                    Typical Kashmiri style food….Food will served Hot when you have it ON TIME.. <br><br>
-
-                    <strong>IMP –</strong> Remember Luxury and experience won’t be together! As this is Super Budget
-                    event make sure that you be prepare well!
-                    </p>
-                </div>
-            </li>
-            <li>
-                <button class="toggle-btn">DAY 2 GULMARG DAY - HAPPY DAY</button>
+                <button class="toggle-btn">{{ day.day }}</button>
                 <div class="content">
+                    {% for detail in day.packagedetails.all %}
                     <p class="day-btn">
-                        <strong>05:00AM :</strong> wake up call! <br><br>
-                        <strong>6-00 AM :</strong> Breakfast and start to GULMARG <br><br>
-                        <strong>8:30 AM :</strong> Time for <strong>GONDOLA RIDE</strong> <br><br>
-                        * Incase of heavy snow our vehicles can’t go to the top..in this situation we have to hire Local
-                        chained vehicles which costs <strong> 2000 to 3000 INR per vehicle</strong>. Cost will be split
-                        between participants. *
-                        <strong>5:00PM :</strong> After completing all the activities at apharwat peak get back to
-                        homestay. <br><br>
-                        <strong> 8:00PM :</strong> Reach the Houseboat and have dinner.
-
-                        <strong>ACTIVITIES AT GULMARG – </strong>Activities cost <strong>not included</strong> in the
-                        event cost
-                        <strong>GONDOLA RIDE – </strong>
-                        Incase of Heavy snow ..the 2nd phase of Gondola Ride will be closed
-                        PHASE 1 COST <strong>– 700 INR </strong>
-                        2 PHASES <strong>– 1500 INR </strong><br><br>
-
-                        <strong>SNOW ACTIVITIES WILL BE DEPENDING THE AVAILABILITY OF SNOW:</strong>
-
-                        <strong> SKIING – </strong>
-                        1 HOUR <strong> – 1000 to 1500 INR </strong>
-
-                        <strong> ICE SLEDGING –
-                            Per Person – 600 to 1000</strong> INR
-
-                        <strong>NOTE – </strong>
-                        <strong>HTC</strong> is not affiliated or has any relationship with any of the adventure
-                        activity operators in Kashmir. Our recommendations, if any, are purely based on
-                        <strong>convenience or merit</strong>. The operators in Kashmir who give services for sledding,
-                        skiing, mule rides or any other activity are all private parties in a highly competitive market.
-                        We have no control, say or share in any of the prices. We consider it unethical to encourage
-                        schemes that cheat or manipulate travelers. Please understand that you are free to choose your
-                        operator, activity and enjoy as you like. Remember, HTC is with you through out the event and is
-                        always by your side only.
-
-                        <strong>STAY TYPE – BASIC HOUSE BOAT STAY – </strong>
-                        Don’t expect <strong>Cinematic house boat stay…</strong>that’s not what is in reality! Our House
-                        Boat is very Basic one where you can have good bed to sleep and nice washroom.. Power Blankets
-                        will be provided….Carry Winter gear
-                        More than 2000 HTC participants stayed here! Good to go for Basic budget backpacking event like
-                        this!
-                        <strong>FOOD – </strong>
-                        Typical Kashmiri style food….Food will served Hot when you have it ON TIME..
-
-                        <strong>IMP –</strong> Remember Luxury and experience won’t be together! As this is Super Budget
-                        event make sure that you be prepare well!
+                        <strong>{{ detail.t1 }} :</strong> <br>
+                        <strong>{{ detail.t2 }} :</strong> <br>
+                        <strong>{{ detail.t3 }} :</strong> <br>
+                        <strong>{{ detail.t4 }} :</strong> <br>
+                        {{ detail.text }} <br><br>
                     </p>
+                    {% endfor %}
                 </div>
             </li>
-            <li>
-                <button class="toggle-btn">DAY 3 SRINAGAR - PAHALGAM</button>
-                <div class="content">
-                    <p class="day-btn">
-                        <strong>05:00AM :</strong> wake up call! <br><br>
-                        <strong>6-00 AM :</strong> Breakfast and start to GULMARG <br><br>
-                        <strong>8:30 AM :</strong> Time for <strong>GONDOLA RIDE</strong> <br><br>
-                        * Incase of heavy snow our vehicles can’t go to the top..in this situation we have to hire Local
-                        chained vehicles which costs <strong> 2000 to 3000 INR per vehicle</strong>. Cost will be split
-                        between participants. *
-                        <strong>5:00PM :</strong> After completing all the activities at apharwat peak get back to
-                        homestay. <br><br>
-                        <strong> 8:00PM :</strong> Reach the Houseboat and have dinner.
-
-                        <strong>ACTIVITIES AT GULMARG – </strong>Activities cost <strong>not included</strong> in the
-                        event cost
-                        <strong>GONDOLA RIDE – </strong>
-                        Incase of Heavy snow ..the 2nd phase of Gondola Ride will be closed
-                        PHASE 1 COST <strong>– 700 INR </strong>
-                        2 PHASES <strong>– 1500 INR </strong><br><br>
-
-                        <strong>SNOW ACTIVITIES WILL BE DEPENDING THE AVAILABILITY OF SNOW:</strong>
-
-                        <strong> SKIING – </strong>
-                        1 HOUR <strong> – 1000 to 1500 INR </strong>
-
-                        <strong> ICE SLEDGING –
-                            Per Person – 600 to 1000</strong> INR
-
-                        <strong>NOTE – </strong>
-                        <strong>HTC</strong> is not affiliated or has any relationship with any of the adventure
-                        activity operators in Kashmir. Our recommendations, if any, are purely based on
-                        <strong>convenience or merit</strong>. The operators in Kashmir who give services for sledding,
-                        skiing, mule rides or any other activity are all private parties in a highly competitive market.
-                        We have no control, say or share in any of the prices. We consider it unethical to encourage
-                        schemes that cheat or manipulate travelers. Please understand that you are free to choose your
-                        operator, activity and enjoy as you like. Remember, HTC is with you through out the event and is
-                        always by your side only.
-
-                        <strong>STAY TYPE – BASIC HOUSE BOAT STAY – </strong>
-                        Don’t expect <strong>Cinematic house boat stay…</strong>that’s not what is in reality! Our House
-                        Boat is very Basic one where you can have good bed to sleep and nice washroom.. Power Blankets
-                        will be provided….Carry Winter gear
-                        More than 2000 HTC participants stayed here! Good to go for Basic budget backpacking event like
-                        this!
-                        <strong>FOOD – </strong>
-                        Typical Kashmiri style food….Food will served Hot when you have it ON TIME..
-
-                        <strong>IMP –</strong> Remember Luxury and experience won’t be together! As this is Super Budget
-                        event make sure that you be prepare well!
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <button class="toggle-btn">DAY 4 SRINAGAR - SONAMARG</button>
-                <div class="content">
-                    <p class="day-btn">
-                        <strong>05:00AM :</strong> wake up call! <br><br>
-                        <strong>6-00 AM :</strong> Breakfast and start to GULMARG <br><br>
-                        <strong>8:30 AM :</strong> Time for <strong>GONDOLA RIDE</strong> <br><br>
-                        * Incase of heavy snow our vehicles can’t go to the top..in this situation we have to hire Local
-                        chained vehicles which costs <strong> 2000 to 3000 INR per vehicle</strong>. Cost will be split
-                        between participants. *
-                        <strong>5:00PM :</strong> After completing all the activities at apharwat peak get back to
-                        homestay. <br><br>
-                        <strong> 8:00PM :</strong> Reach the Houseboat and have dinner.
-
-                        <strong>ACTIVITIES AT GULMARG – </strong>Activities cost <strong>not included</strong> in the
-                        event cost
-                        <strong>GONDOLA RIDE – </strong>
-                        Incase of Heavy snow ..the 2nd phase of Gondola Ride will be closed
-                        PHASE 1 COST <strong>– 700 INR </strong>
-                        2 PHASES <strong>– 1500 INR </strong><br><br>
-
-                        <strong>SNOW ACTIVITIES WILL BE DEPENDING THE AVAILABILITY OF SNOW:</strong>
-
-                        <strong> SKIING – </strong>
-                        1 HOUR <strong> – 1000 to 1500 INR </strong>
-
-                        <strong> ICE SLEDGING –
-                            Per Person – 600 to 1000</strong> INR
-
-                        <strong>NOTE – </strong>
-                        <strong>HTC</strong> is not affiliated or has any relationship with any of the adventure
-                        activity operators in Kashmir. Our recommendations, if any, are purely based on
-                        <strong>convenience or merit</strong>. The operators in Kashmir who give services for sledding,
-                        skiing, mule rides or any other activity are all private parties in a highly competitive market.
-                        We have no control, say or share in any of the prices. We consider it unethical to encourage
-                        schemes that cheat or manipulate travelers. Please understand that you are free to choose your
-                        operator, activity and enjoy as you like. Remember, HTC is with you through out the event and is
-                        always by your side only.
-
-                        <strong>STAY TYPE – BASIC HOUSE BOAT STAY – </strong>
-                        Don’t expect <strong>Cinematic house boat stay…</strong>that’s not what is in reality! Our House
-                        Boat is very Basic one where you can have good bed to sleep and nice washroom.. Power Blankets
-                        will be provided….Carry Winter gear
-                        More than 2000 HTC participants stayed here! Good to go for Basic budget backpacking event like
-                        this!
-                        <strong>FOOD – </strong>
-                        Typical Kashmiri style food….Food will served Hot when you have it ON TIME..
-
-                        <strong>IMP –</strong> Remember Luxury and experience won’t be together! As this is Super Budget
-                        event make sure that you be prepare well!
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <button class="toggle-btn">DAY 5 SRINAGAR</button>
-                <div class="content">
-                    <p class="day-btn">
-                        <strong>05:00AM :</strong> wake up call! <br><br>
-                        <strong>6-00 AM :</strong> Breakfast and start to GULMARG <br><br>
-                        <strong>8:30 AM :</strong> Time for <strong>GONDOLA RIDE</strong> <br><br>
-                        * Incase of heavy snow our vehicles can’t go to the top..in this situation we have to hire Local
-                        chained vehicles which costs <strong> 2000 to 3000 INR per vehicle</strong>. Cost will be split
-                        between participants. *
-                        <strong>5:00PM :</strong> After completing all the activities at apharwat peak get back to
-                        homestay. <br><br>
-                        <strong> 8:00PM :</strong> Reach the Houseboat and have dinner.
-
-                        <strong>ACTIVITIES AT GULMARG – </strong>Activities cost <strong>not included</strong> in the
-                        event cost
-                        <strong>GONDOLA RIDE – </strong>
-                        Incase of Heavy snow ..the 2nd phase of Gondola Ride will be closed
-                        PHASE 1 COST <strong>– 700 INR </strong>
-                        2 PHASES <strong>– 1500 INR </strong><br><br>
-
-                        <strong>SNOW ACTIVITIES WILL BE DEPENDING THE AVAILABILITY OF SNOW:</strong>
-
-                        <strong> SKIING – </strong>
-                        1 HOUR <strong> – 1000 to 1500 INR </strong>
-
-                        <strong> ICE SLEDGING –
-                            Per Person – 600 to 1000</strong> INR
-
-                        <strong>NOTE – </strong>
-                        <strong>HTC</strong> is not affiliated or has any relationship with any of the adventure
-                        activity operators in Kashmir. Our recommendations, if any, are purely based on
-                        <strong>convenience or merit</strong>. The operators in Kashmir who give services for sledding,
-                        skiing, mule rides or any other activity are all private parties in a highly competitive market.
-                        We have no control, say or share in any of the prices. We consider it unethical to encourage
-                        schemes that cheat or manipulate travelers. Please understand that you are free to choose your
-                        operator, activity and enjoy as you like. Remember, HTC is with you through out the event and is
-                        always by your side only.
-
-                        <strong>STAY TYPE – BASIC HOUSE BOAT STAY – </strong>
-                        Don’t expect <strong>Cinematic house boat stay…</strong>that’s not what is in reality! Our House
-                        Boat is very Basic one where you can have good bed to sleep and nice washroom.. Power Blankets
-                        will be provided….Carry Winter gear
-                        More than 2000 HTC participants stayed here! Good to go for Basic budget backpacking event like
-                        this!
-                        <strong>FOOD – </strong>
-                        Typical Kashmiri style food….Food will served Hot when you have it ON TIME..
-
-                        <strong>IMP –</strong> Remember Luxury and experience won’t be together! As this is Super Budget
-                        event make sure that you be prepare well!
-                    </p>
-                </div>
-            </li>
+            {% endfor %}
         </ul>
     </div>
-</div>
+    
+</div> 
 
 <hr>
 
@@ -752,49 +510,6 @@
     </div>
 </div>
 <hr class="gallery-hr">
-
-
-<!-- <div id="reviews" class="reviews">
-  <div class="container" style="background-color: antiquewhite;">
-    <h1 style="color: orangered;">Related Tours</h1>
-    <div class="reviews-cards">
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="./images/pexels-kindelmedia-8688522.jpg" class="img-fluid rounded-start" alt="..." >
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title" style="font-weight: bold;">NYE SPL BATCHES – GOKARNA & DANDELI 3D/2N</h5>
-            <p class="card-text">To make your trips better</p>
-            <p class="card-text"><span class="price-1">₹10,000</span></p>
-            <p class="card-text"><span class="price-2">₹9,999</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="./images/pexels-kindelmedia-8688522.jpg" class="img-fluid rounded-start" alt="..." >
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title" style="font-weight: bold;">NYE SPL BATCHES – GOKARNA & DANDELI 3D/2N</h5>
-          <p class="card-text">To make your trips better</p>
-          <p class="card-text"><span class="price-1">₹10,000</span></p>
-          <p class="card-text"><span class="price-2">₹9,999</span></p>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr> -->
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

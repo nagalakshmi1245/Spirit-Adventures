@@ -65,8 +65,15 @@ class packages(models.Model):
 
 class package_details_category(models.Model):
     day=models.CharField(max_length=100)
+    package_id=models.ForeignKey(
+        packages, 
+        on_delete=models.CASCADE, 
+        blank=False,
+        null=True
+    )
     def __str__(self):
         return self.day
+
     
 class package_details_sub(models.Model):
     t1=models.CharField(max_length=100)
@@ -80,8 +87,6 @@ class package_details_sub(models.Model):
         blank=False,
         related_name='packagedetails'
     )
-    # def __str__(self):
-    #     return self.t1,self.t2,self.t3,self.t4,self.text
     
 class signinModel(models.Model):
     username=models.CharField(max_length=50,null=True)
